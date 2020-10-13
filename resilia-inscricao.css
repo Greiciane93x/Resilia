@@ -1,0 +1,44 @@
+body{
+    background: url("imagens/bg.jpg");
+}
+.informacoes{
+    color:white; 
+    text-align: left;
+    width: 30%;
+    vertical-align: center;
+    margin: 0 1%; 
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-color: #000000 ;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    position: relative;
+    width: 350px;
+    margin: 0 auto; 
+    font-family: candara;
+    
+
+}
+    
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0; 
+    box-sizing: border-box; 
+
+    
+}
+input[type="submit"]{
+
+                height: 55px;
+                width: 300px;
+                background-color: yellow;
+                border-radius: 10px;
+                font-family: candara;
+                margin: 30px 0; 
+                
+                
+ }
+
+ 

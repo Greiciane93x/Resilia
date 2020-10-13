@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de César</title>
+</head>
+<body>
+    <script> 
+        function cifraComCifraDeCesar(deslocamento, mensagem ){
+            var NumReceb = 0; 
+            var mensagemEncriptada = "";       
+            
+            for (var i = 0; i < mensagem.length; i++){               
+                NumReceb = mensagem[i].charCodeAt(); 
+                mensagemEncriptada += String.fromCharCode(NumReceb + deslocamento) 
+            }
+            return mensagemEncriptada;
+        }
+        function decifraCifraDeCesar( deslocamento, mensagemCifrada ){
+            var NumReceb = 0; 
+            var mensagemDecifrada = "";
+            
+            for (var i = 0; i < mensagemCifrada.length; i++){               
+                
+                NumReceb = mensagemCifrada[i].charCodeAt(); 
+                mensagemDecifrada += String.fromCharCode(NumReceb - deslocamento) 
+            }
+            return mensagemDecifrada;
+        }
+        console.log (cifraComCifraDeCesar(1, "ALICE"));
+        console.log(decifraCifraDeCesar(1, "BMJDF")); 
+    </script> 
+</body>
+</html>

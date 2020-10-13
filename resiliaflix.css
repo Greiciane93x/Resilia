@@ -1,0 +1,231 @@
+body{
+	background-color: gold;
+	
+}
+
+
+img { 
+	display:flex; 
+	flex-direction: column;
+	width: 32px;
+	height: 30px;
+	
+}
+header{
+	font-family: Garamond;
+	background-color: black;
+	width: 100%;
+	
+	
+	
+}
+.container{
+	display:flex; 
+	justify-content: space-between;
+	
+}
+
+h1{
+	display:flex; 
+	margin-top: 2%;
+	margin-left: 3%;
+	font-size: 50px;
+	font-weight: bold;
+	color: gold;
+	text-shadow: 2px 1px white;
+	
+}
+
+h2{
+	font-family: Garamond;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.alinhamentoTexto{
+	font-size: 15px;
+	color: black;
+	
+}
+.cabecalhoPrincipal-nav-link {
+	
+	background-color: gold;
+	justify-content: center;
+	display: flex; 
+	font-weight: bold;
+	border: none;
+	border-radius: 4px;
+	padding: 5px;
+	margin-right: 5px;
+	transition: 1s all;
+}
+.cabecalhoPrincipal-nav-link:hover{
+	background: white;
+	transform: scale(1.2);
+}
+.linksRedirecionar{
+	display:flex;
+	height:3%;
+	margin-top: 3%;
+	
+}
+
+.RodapePrincipal-redes-list{
+	display: flex;
+	max-width: 300px;
+	margin: 0 auto;
+	margin-bottom: -30px;
+	align-items: center;
+	justify-content: space-around;
+	width:100%;
+	flex-wrap: nowrap;
+	
+	
+	
+}
+.links-rodape-resilia-flix{
+	
+	background-color: cornsilk;
+	padding-top: 5px;
+}
+.copyright{
+	font-family: Garamond;
+	color: black;
+	
+}
+
+.listadeFilmes{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-flow:  wrap;
+	justify-content: space-around;
+	margin: 2%;
+	
+	
+	
+}
+
+.imagensFilmes{
+	display: flex;
+	width: 300px;
+	height: 340px;
+	margin-right: 5px;
+	margin-bottom: 13px;
+	transition: 1s all;
+	
+}
+.imagensFilmes:hover{
+	transform: scale(1.2);
+}
+
+.imagensFilmes:nth-child(4n){
+	margin-right: 0;
+}
+.imagensFilmes:nth-child(4n + 1){
+	margin-left: 0;
+}
+
+
+@media(max-width: 768px){
+	
+	header{
+		display: flex;
+	}
+	
+	.container{
+		
+		display: flex;
+		justify-content: flex-start;
+		
+		flex-flow:column;
+		width: 100%;
+		
+	}
+	h1{
+		
+		display:flex;
+		align-items: center;
+		font-size: 50px;
+		font-weight: bold;
+		color: gold;
+		text-shadow: 2px 1px white;
+		margin-left: 5%;
+		
+		
+	}
+	
+	
+	
+	.cabecalhoPrincipal-nav-link {
+		
+		display: flex;
+		flex-wrap: wrap;
+		background-color: gold;
+		justify-content: center;
+		display: flex; 
+		font-weight: bold;
+		margin-top: 1%;
+		border:none;
+		padding: 5px;
+		width: 35%;
+		align-items: center;
+		transition: 1s all;
+		
+		
+		
+	}
+	.cabecalhoPrincipal-nav-link:hover{
+		background: white;
+		transform: scale(1.2);
+	}
+	.linksRedirecionar{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 160px;
+		justify-content: flex-end;
+		
+	}
+	.listadeFilmes{
+		display: flex;
+		flex-flow:  column wrap;
+		justify-content: space-around;
+		margin: 2%;
+		
+		
+	}
+	
+	.imagensFilmes{
+		display: flex;
+		width: 200px;
+		height: 240px;
+		align-items: center;
+		transition: 1s all;
+		
+		
+	}
+	.imagensFilmes:hover{
+		transform: scale(1.2); 
+	}
+	
+	
+	.RodapePrincipal-redes-list{
+		display: flex;
+		max-width: 300px;
+		margin: 0 auto;
+		margin-bottom: -30px;
+		align-items: center;
+		justify-content: space-around;
+		width:100%;
+		flex-wrap: nowrap;
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}
