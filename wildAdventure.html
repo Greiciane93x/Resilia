@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="wildAdventure.css">
+    <link rel="js" href="principal.js">
+    <title>Wild Adventure</title>
+</head>
+
+
+<body>
+    
+    
+    
+    
+    <div class="wildadventure" id="corpo" > 
+        <h1>Wild Adventure</h1>
+        
+        <p></p>
+        <h3></h3>
+        <div class="decisao" id="decisao-cenario"> 
+            <button class="cenario" onclick="cenario('1'); ">Deserto da Namíbia</button>
+            <button class="cenario" onclick="cenario('2'); ">Floresta de Coníferas</button>
+            <button class="cenario" onclick="cenario('3'); ">Floresta de Daintree</button>
+            <button class="cenario" onclick="cenario(); "></button>
+            
+            
+            
+        </div>
+    </div>
+    
+    <div class="cervo" id="condicao" > 
+        <p></p>
+        <button class="decisaoCervo" onclick="decidirComer('sim');">Sim</button>
+        <button class="decisaoCervo" onclick="decidirComer('não');">Não</button>
+        
+    </div>
+    
+    <div class="continuar" id="continuacao" > 
+        <p></p>
+        <button class="continue" onclick=" desejaContinuar('sim');">Sim</button>
+        <button class="continue" onclick=" desejaContinuar('não');">Não</button>
+    </div> 
+    <!-- <button class="cenario" onclick="cenario('1'); ">Floresta de Coníferas</button>
+        <button class="cenario" onclick="cenario('2'); ">Deserto da Namíbia</button> -->
+        <!-- </div class="agua" id="condicaoAgua"> 
+            
+            <button class="aguaContaminada" onclick=" decidirBeber('sim');">Sim</div>
+                <button class="aguaContaminada" onclick=" decidirBeber('não');">Não</div>
+                    
+                </div>
+            -->
+            
+            
+            
+            <script> 
+                
+                
+                var mensagem = document.querySelector('p'); 
+                mensagem.textContent = 'Por favor, escolha o cenário que pretende participar...'
+                
+                var decisao = document.getElementById('condicao'); 
+                decisao.style.display = 'none';
+                
+                document.body.style.backgroundImage = "url('https://f.i.uol.com.br/fotografia/2018/06/19/15294504855b298ff57b3d1_1529450485_3x2_md.jpg')";
+                var decideComerCervo = document.querySelector('div#corpo');
+                var continueJogo = document.querySelector('div#continuacao'); 
+                 continueJogo.style.display = 'none';
+                
+                
+                
+                function cenario(local) {
+
+
+                    
+                    
+                    
+                    if(local == 1){
+                        
+                        var descricao = document.querySelector('p');
+                        var decisao = document.getElementById('condicao'); 
+                        decisao.style.display = 'block';
+                        
+                        var cenario = document.querySelector('div#decisao-cenario')
+                        cenario.style.display = 'none';
+
+                        var continueJogo = document.querySelector('div#continuacao'); 
+                        continueJogo.style.display = 'none';
+                        
+                        
+                        
+                        document.body.style.backgroundImage = "url('imagens_wildAdventure/76027330_elfront-viagem-namibia-shutterstock.jpg')";
+                        
+                        descricao.textContent = `Você enfrentará o Deserto da Namíbia, na África Subsaariana.` 
+                        descricao.textContent += ` A África subsariana ou subsaariana , antes impropriamente chamada África negra, corresponde à parte do continente africano situada ao sul do Deserto do Saara.`
+                        descricao.textContent += ` É constituída de quarenta e oito Estados, cujas fronteiras resultaram da descolonização.`
+                        descricao.textContent += ` O clima tropical predomina na maior parte da África, tanto na zona tropical, úmida no verão e seca no inverno, quanto na zona equatorial, com temperaturas elevadas e chuvas abundantes.`
+                        descricao.textContent += ` Você encontrou uma carcaça inteira de um Alce  `
+                        descricao.textContent += ` O Alce está com vestígios de que estava babando de raiva, o que pode ser perigoso.`
+                        descricao.textContent += `  DECIDE SE ALIMENTAR DELE??`
+                        
+                        // apresentacao.innerHTML+='Você encontrou uma carcaça inteira de um Alce <br>'; 
+                        //apresentacao.innerHTML+='O Alce está com vestígios de que estava babando de raiva, o que pode ser perigoso.'; 
+                        
+                        
+                        
+                    }else if (local == 2){
+                        var decisao = document.getElementById('condicao'); 
+                        decisao.style.display = 'block';
+                        
+                        var cenario = document.querySelector('div#decisao-cenario')
+                        cenario.style.display = 'none';
+
+                        var continueJogo = document.querySelector('div#continuacao'); 
+                        continueJogo.style.display = 'none';
+                
+                        var descricao = document.querySelector('p');
+                        
+                        document.body.style.backgroundImage = "url('imagens_wildAdventure/floresta-e-monte-das-coníferas-43591822.jpg')"; 
+                        
+                        descricao.textContent = ` Você enfrentará a Floresta de Coníferas.`
+                        descricao.textContent += ` Situa-se no hemisfério norte, abrangendo a Ásia (Sibéria, Japão), América do Norte (Alasca, Canadá, sul da Groenlândia) e Europa (parte da Noruega, Suécia).`
+                        descricao.textContent += ` O clima nessa região é subártico, caracterizado por inverno muito frio, longo e seco com temperaturas que chegam a -50º C.  `
+                        descricao.textContent += ` O verão é curto e úmido, os dias são mais longos e as temperaturas podem chegar a 20º C. `
+                        descricao.textContent += ` As chuvas são pouco frequentes. Durante o verão ocorre degelo, formando lagos, pântanos e brejos. O solo é raso, pobre em nutrientes e coberto por folhas. `                
+                        descricao.textContent += ` Você encontrou uma carcaça inteira de um Alce  `
+                        descricao.textContent += ` O Alce está com vestígios de que estava babando de raiva, o que pode ser perigoso.`
+                        descricao.textContent += `  DECIDE SE ALIMENTAR DELE??`
+                        
+                        
+                        
+                        
+                    }else if(local == 3){
+                        var decisao = document.getElementById('condicao'); 
+                        decisao.style.display = 'block';
+                        var cenario = document.querySelector('div#decisao-cenario')
+                        cenario.style.display = 'none';
+
+                        var continueJogo = document.querySelector('div#continuacao'); 
+                         continueJogo.style.display = 'none';
+                        var descricao = document.querySelector('p');
+                        
+                        document.body.style.backgroundImage = "url('imagens_wildAdventure/20200706floresta-australia.jpg')";
+                        descricao.textContent = `Bem vindo a Floresta Tropical de Daintree Rainforest, na Austrália. `
+                        descricao.textContent += `Além de ser considerada a floresta tropical mais antiga do mundo, o lugar se diferencia dos demais por ser ponto de encontro entre a floresta e a barreira de corais.`
+                        descricao.textContent += ` Você encontrou uma carcaça inteira de um Alce.  `
+                        descricao.textContent += ` O Alce está com vestígios de que estava babando de raiva, o que pode ser perigoso.`
+                        descricao.textContent += `  DECIDE SE ALIMENTAR DELE??`
+                        
+                        
+                    }
+                    
+                }
+                
+                
+                function decidirComer(decisao){
+                    
+                    
+                    
+                    if (decisao == 'sim') {
+                        var cenario = document.querySelector('div#decisao-cenario')
+                        cenario.style.display = 'none';
+
+                        var continueJogo = document.querySelector('div#continuacao'); 
+                        continueJogo.style.display = 'block';
+
+                        decideComerCervo.textContent = ` Você está apresentando um estado de confusão mental, desorientação, agressividade, alucinações.`
+                        decideComerCervo.textContent += ` A equipe do programa teve que te socorrer às pressas, o que te deu um ASP nota -5.`
+                        decideComerCervo.textContent += `       ||END GAME||`
+                        decideComerCervo.textContent += `     Deseja jogar novamente?   `
+                        
+                        
+                    }
+                    else if (decisao =='não'){
+                        
+                        var cenario = document.querySelector('div#decisao-cenario')
+                        cenario.style.display = 'none';
+
+                        var continueJogo = document.querySelector('div#continuacao'); 
+                        continueJogo.style.display = 'block';
+                        decideComerCervo.textContent = `Você achou uma larva e passas ricas em magnésio.`
+                        decideComerCervo.textContent += ` Ao comer o que encontrou, pode encontrar um caminho que tinha uma caverna cheia de babuínos mortos.`
+                        decideComerCervo.textContent += ` O que te levou a imaginar se não tinha um leopardo os guardando na caverna.`
+                        decideComerCervo.textContent += ` Ao encontrar os babuínos negros, pode perceber que não podia ficar muito tempo, pois de noite poderia encontrar o seu predador voltando à caverna.`
+                        decideComerCervo.textContent += ` Você pode se alimentar e abasteceu uma mochila com comida para pelo menos 2 dias.`
+                        decideComerCervo.textContent += ` Ao sair dali, encontrou a rota do fim do jogo.`
+                        decideComerCervo.textContent += ` Você recebeu um ASP nota 10`
+                        decideComerCervo.textContent += `     ||VOCÊ GANHOU!!||    `
+                        decideComerCervo.textContent += `     Deseja jogar novamente?   `
+                        
+                        
+                    }
+                    var decisao = document.getElementById('condicao'); 
+                    decisao.style.display = 'none';
+                    
+                }
+
+                
+                function desejaContinuar(jogarNovamente){
+
+                    
+                    var continueJogo = document.querySelector('div#continuacao');
+                              
+                    continueJogo.style.display = 'block';
+                    
+                
+
+                   console.log(continueJogo);
+                   
+                    var mensagem = document.querySelector('div#wildadventure'); 
+                    // mensagem.textContent += `Deseja jogar novamente??` 
+                  
+                    if(jogarNovamente == 'sim'){
+                        
+                              
+                            cenario(); 
+                        }else if(jogarNovamente == 'não'){
+                            document.body.style.backgroundImage = "url('https://rawthrills.com/wp-content/uploads/2015/02/JP_hi_res_4.jpg')"
+                            //document.body.textContent = "FIM DE JOGO"
+                           var texto = document.getElementById('corpo'); 
+                            texto.textContent = `FIMMMM!!!`
+                            continueJogo.style.display = 'none';
+
+
+                        }
+                        
+                     
+                }
+               
+                
+                
+                
+                
+                
+                
+                
+                // cenario.innerHTML += ``; 
+                
+                
+                
+                
+                // var itens1 = prompt("Digite aqui 1 item de sobreviência : canivete, bússola ou facão")
+                
+                
+                
+                // switch (itens1){
+                    //     case 'canivete': 
+                    //     break; 
+                    //     case 'bússola': 
+                    //     itens1.innerHTML += `A bússola não funciona no deserto`
+                    //     break; 
+                    //     case 'facão': 
+                    //     itens.innerHTML +=  `poderá usar para caçar e cortar lenha`
+                    //     break; 
+                    //     default: 
+                    //     itens.innerHTML += `favor, escolha uma alternativa`
+                    
+                    
+                    
+                    
+                    
+                    
+                    // alert('No meio do caminho, você encontrou água contaminada com metais pesados')
+                    // alert ('Você decide beber a água? (S/N) '); 
+                    // var aguaContaminada = prompt("Digite aqui se você bebeu a água contaminada")
+                    
+                    // switch (aguaContaminada) { 
+                        //     case 'S': 
+                        //     aguaContaminada.innerHTML += `Você teve uma infecção, o que te levou uma desidratação mais grave`
+                        //     aguaContaminada.innerHTML += `A equipe do programa teve que te socorrer às pressas, o que te deu um ASP nota -5`
+                        //     aguaContaminada.innerHTML += `||END GAME ||`
+                        //     break; 
+                        //     case 'N': 
+                        //     aguaContaminada.innerHTML += `Você conseguiu fugir dos Babuínos negros e consegue se proteger em uma caverna `
+                        //     aguaContaminada.innerHTML += `Ao se proteger até o décimo dia na caverna, os Babuínos negros voltaram.`
+                        //     aguaContaminada.innerHTML += `Para se proteger, você decide um contra-ataque e atira pedras contra eles `
+                        //     aguaContaminada.innerHTML += `Assustados eles fogem, e você consegue encontrar um pássaro que eles tinham encontrado`
+                        //     aguaContaminada.innerHTML += `Ao comê-lo, as funções básicas do seu organismo foram restauradas, e você ficou forte o suficiente para andar por mais 2 dias e encontrou uma cachoeira`
+                        //     aguaContaminada.innerHTML += `Você recebeu um ASP nota 10')`
+                        //     aguaContaminada.innerHTML += `||VOCÊ GANHOU!!||`
+                        //     break; 
+                        //     default: 
+                        //     aguaContaminada.innerHTML += `Por favor digite uma alternativa possível`
+                        
+                        // } 
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        // largadosEDescuidadosGame(); 
+                        
+                        // var decideContinuar = prompt("Você deseja jogar novamente(S/N)?"); 
+                        // if(decideContinuar == "S" || decideContinuar == "s"){
+                            //     function desejaContinuar(decide){
+                                //         var arrayEscolha = [0,1,2]; 
+                                //         for (var i = 0; i < arrayEscolha.length; i++){
+                                    
+                                    //             largadosEDescuidadosGame(); 
+                                    //         }
+                                    
+                                    //     }
+                                    // }else if (decideContinuar == 'N', decideContinuar == 'n'){
+                                        //     alert("||FIM DE JOGO||")
+                                        // }else{
+                                            //     alert('Por favor, escolha dentro das alternativas')
+                                            // }
+                                            // desejaContinuar(decideContinuar); 
+                                            
+                                        </script> 
+                                        
+                                    </body>
+                                    </html>
